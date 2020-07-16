@@ -54,7 +54,7 @@ public class PaymentGatewaySmokeTest extends TestCase {
     }
 
     public void testDesiredCardSelection() {
-        assertTrue(true);
+        assertTrue(false);
     }
 
     public void testErrorMessageParse() {
