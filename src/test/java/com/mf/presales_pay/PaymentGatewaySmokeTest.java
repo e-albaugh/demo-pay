@@ -3,8 +3,6 @@ package com.mf.presales_pay;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import org.junit.Test;
-import org.junit.Ignore;
 
 /**
  * Unit test for simple App.
@@ -34,8 +32,6 @@ public class PaymentGatewaySmokeTest extends TestCase {
         assertTrue(true);
     }
 
-    @Test
-    @Ignore
     public void testGatewayNonResponse() {
         assertTrue(true);
     }
