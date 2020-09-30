@@ -61,7 +61,7 @@ public class PaymentGatewaySmokeTest extends TestCase {
     }
 
     public void testDisplayProcessingWaitTime() {
-        assertTrue(true);
+        assertTrue(false);
     }
 
     public void testRespectivePaymentOption() {
