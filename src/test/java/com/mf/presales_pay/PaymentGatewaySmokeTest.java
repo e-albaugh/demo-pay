@@ -23,8 +23,7 @@ public class PaymentGatewaySmokeTest extends TestCase {
     public static Test suite() {
         return new TestSuite(PaymentGatewaySmokeTest.class);
     }
-
-
+ 
     public void testUserProfCheckout() {
         assertTrue(true);
     }
@@ -33,6 +32,8 @@ public class PaymentGatewaySmokeTest extends TestCase {
         assertTrue(true);
     }
 
+    @Test
+    @Ignore
     public void testGatewayNonResponse() {
         assertTrue(true);
     }
