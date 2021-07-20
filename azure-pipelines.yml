@@ -8,7 +8,7 @@ jobs:
       OctaneServiceConnection: 'albaugh2-ws-almoctane-saas'
       WorkspaceList: '16001'
 
-- job: demo-pay
+- job: demopay
   dependsOn: AlmOctanePipelineStart
   pool:
     vmImage: ubuntu-latest
