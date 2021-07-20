@@ -1,0 +1,33 @@
+jobs:
+
+- job: AlmOctanePipelineStart
+  condition: always()
+  steps:
+  - task: octane-start-task@1
+    inputs:
+      OctaneServiceConnection: 'albaugh2-ws-almoctane-saas'
+      WorkspaceList: '16001'
+
+- job: demo-pay
+  dependsOn: AlmOctanePipelineStart
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - task: Maven@3
+    inputs:
+      mavenPomFile: 'pom.xml'
+      mavenOptions: '-Xmx3072m'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.8'
+      jdkArchitectureOption: 'x64'
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      goals: 'package'
+      
+- job: AlmOctanePipelineEnd
+  condition: always()
+  steps:
+  - task: octane-end-task@1
+    inputs:
+      OctaneServiceConnection: 'albaugh2-ws-almoctane-saas'
+      WorkspaceList: '16001'
