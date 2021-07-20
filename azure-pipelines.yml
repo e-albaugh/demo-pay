@@ -26,6 +26,9 @@ jobs:
       
 - job: AlmOctanePipelineEnd
   condition: always()
+  dependsOn: 
+  - AlmOctanePipelineStart
+  - demopay
   steps:
   - task: octane-end-task@1
     inputs:
